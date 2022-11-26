@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "projects": {
+    "api-stackbit": "libs/api/stackbit",
+    "assets": "libs/assets",
+    "home": "apps/home",
+    "home-e2e": "apps/home-e2e",
+    "utils": "libs/utils",
+    "waweb-app": "libs/waweb/app",
+    "waweb-auth": "libs/waweb/auth",
+    "waweb-config": "libs/waweb/config",
+    "waweb-layout": "libs/waweb/layout",
+    "waweb-message": "libs/waweb/message",
+    "waweb-ui": "libs/waweb/ui"
+  }
+}

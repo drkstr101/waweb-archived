@@ -1,0 +1,53 @@
+{
+  "root": "libs/waweb/app",
+  "sourceRoot": "libs/waweb/app/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/waweb/app",
+        "tsConfig": "libs/waweb/app/tsconfig.lib.json",
+        "project": "libs/waweb/app/package.json",
+        "entryFile": "libs/waweb/app/src/index.ts",
+        "external": [
+          "react/jsx-runtime",
+          "@reach/skip-nav",
+          "@adobe/react-spectrum",
+          "@spectrum-icons/workflow",
+          "next/router",
+          "next/head",
+          "next/link",
+          "next/image",
+          "clsx"
+        ],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/waweb/app/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/waweb/app/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/waweb/app"],
+      "options": {
+        "jestConfig": "libs/waweb/app/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

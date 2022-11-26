@@ -1,0 +1,22 @@
+@import '../../base-ui.theme/colors/colors.module.scss';
+
+.evaInput {
+  padding: 11px 18px;
+  font-size: inherit;
+  font-family: inherit;
+
+  border-radius: 7px;
+  border: solid 1px var(--wa-border-color-lightest, #ededed);
+  background-color: var(--wa-bg-dent, #f6f6f6);
+
+  &[data-error] {
+    background: var(--wa-error-bg, #fdeff2); //TODO
+    border: 1px solid var(--wa-error-color, #e62e5c);
+  }
+}
+
+textarea.evaInput {
+  // TODO - give more control over resizing
+  // resize: vertical;
+  resize: none;
+}

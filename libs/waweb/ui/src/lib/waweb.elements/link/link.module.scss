@@ -1,0 +1,7 @@
+.primaryLink {
+  color: var(--wa-accent-color, hsl(var(--a)));
+
+  &:hover {
+    color: var(--wa-accent-heavy, hsl(var(--af)));
+  }
+}

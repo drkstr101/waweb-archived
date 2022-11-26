@@ -1,0 +1,59 @@
+@import '../colors/colors.module.scss';
+
+/**
+ * CSS colors and variables for the app.
+ */
+
+.primaryPalette {
+  color: $d50;
+  --wa-text-color: #{$d50};
+  --wa-text-color-heavy: #{$d60};
+  --wa-text-color-light: #{$d40};
+  --wa-text-inactive: #{$d20};
+  --wa-text-inactive-heavy: #{$d30};
+
+  --wa-border-color: #{$d20};
+  --wa-border-color-heavy: #{$d30};
+  --wa-border-color-light: #{$d15};
+  --wa-border-color-lightest: hsl(var(--b3));
+
+  // -- accent -- //
+  --wa-accent-color: hsl(var(--a));
+  --wa-accent-heavy: hsl(var(--af));
+  --wa-accent-light: #{$p40};
+  --wa-accent-text: hsl(var(--a));
+  --wa-accent-text-heavy: hsl(var(--af));
+  --wa-text-on-accent: hsl(var(--b1));
+  --wa-accent-bg: #{$g20};
+  --wa-accent-bg-heavy: #{$g30};
+
+  // -- background -- //
+  // // higher number = more important, and 'closer' to the user.
+  // --wa-bg-01: hsl(var(--b1));
+  // --wa-bg-03: hsl(var(--b2));
+  // --wa-bg-05: hsl(var(--b3));
+  // --wa-bg-07: #{$d15};
+  // --wa-bg-09: #{$d20};
+  // --wa-bg-11: #{$d30};
+
+  // intractable item
+  --wa-bg-color: hsl(var(--b1)); // when resting
+  --wa-bg-heavy: hsl(var(--b2)); // when hovering, focus
+  --wa-bg-heaviest: hsl(var(--b3)); // when active (clicked)
+
+  --wa-bg-bedrock: hsl(var(--b1)); // i.e. <body/> background
+  --wa-bg-navigation: hsl(var(--b2)); // i.e. <body/> background
+  --wa-bg-overlay: hsl(var(--b1)); // e.g. button, input, etc
+  --wa-bg-modal: hsl(var(--b1)); // e.g. button, input, etc
+  --wa-bg-tooltip: hsl(var(--b1)); // e.g. button, input, etc
+  --wa-bg-tooltip-heavy: hsl(var(--b2));
+  --wa-bg-dent: hsl(var(--b2));
+
+  // -- error -- //
+  // might replace with 'error' theme
+  --wa-error-color: #{$r50};
+  --wa-error-heavy: #{$r60};
+  --wa-error-light: #{$r40};
+  --wa-error-bg: #{$r20};
+  --wa-error-bg-heavy: #{$r30};
+}

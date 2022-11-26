@@ -1,0 +1,87 @@
+type: object
+name: CtaSection
+label: CTA
+labelField: title
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - Section
+groups:
+  - sectionComponent
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: backgroundSize
+    type: enum
+    group: styles
+    label: Background size
+    options:
+      - label: Full
+        value: full
+      - label: Inset
+        value: inset
+    default: full
+  - name: title
+    type: string
+    label: Title
+    default: "Let's do this"
+  - name: content
+    type: markdown
+    label: Content
+    default: |
+      The Stackbit theme is flexible and scalable to every need. It can manage any layout and any screen.
+  - name: actions
+    type: list
+    label: Actions
+    items:
+      type: model
+      models:
+        - Action
+        - Link
+    default:
+      - type: Action
+        label: Try it now
+        url: '/about'
+        style: primary
+  - name: backgroundImage
+    type: model
+    group: styles
+    label: Background image
+    models:
+      - ImageBlock
+  - name: styles
+    type: style
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+        alignItems: ['flex-start', 'flex-end', 'center']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+        flexDirection: ['row', 'col']
+      title:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      content:
+        textAlign: ['left', 'center', 'right']
+      actions:
+        justifyContent: ['flex-start', 'flex-end', 'center']
+    default:
+      self:
+        height: auto
+        width: wide
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-12', 'pb-12', 'pl-4', 'pr-4']
+        alignItems: center
+        justifyContent: center
+        flexDirection: row
+      title:
+        textAlign: left
+      content:
+        textAlign: left
+      actions:
+        justifyContent: 'flex-start'

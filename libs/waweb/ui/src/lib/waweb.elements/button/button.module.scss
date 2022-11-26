@@ -1,0 +1,51 @@
+.Button {
+  border-radius: 5px;
+  height: var(--primary-button-height, 46px);
+  font-size: inherit;
+  font-family: inherit;
+
+  text-align: center;
+  transition: 300ms all;
+
+  outline: none;
+
+  &:disabled {
+    filter: saturate(0.38);
+    cursor: auto;
+  }
+
+  &[data-variation='normal'] {
+    border: 1px solid var(--wa-bg-color, white);
+    background-color: var(--wa-bg-color, white);
+    color: var(--wa-accent-color, hsl(var(--a)));
+
+    &:hover:not(:disabled) {
+      border: 1px solid var(--wa-bg-heavy, white);
+      background-color: var(--wa-bg-heavy, white);
+      color: var(--wa-accent-heavy, hsl(var(--af)));
+    }
+  }
+
+  &[data-variation='ghost'] {
+    border: 1px solid var(--wa-accent-color, hsl(var(--a)));
+    background-color: var(--wa-bg-color, white);
+    color: var(--wa-accent-color, hsl(var(--a)));
+
+    &:hover:not(:disabled) {
+      border: 1px solid var(--wa-accent-heavy, hsl(var(--af)));
+      background-color: var(--wa-bg-heavy, white);
+      color: var(--wa-accent-heavy, hsl(var(--af)));
+    }
+  }
+
+  &[data-variation='cta'] {
+    border: 1px solid var(--wa-accent-color, hsl(var(--a)));
+    background-color: var(--wa-accent-color, hsl(var(--a)));
+    color: var(--wa-text-on-accent, white);
+
+    &:hover:not(:disabled) {
+      border: 1px solid var(--wa-accent-heavy, hsl(var(--af)));
+      background-color: var(--wa-accent-heavy, hsl(var(--af)));
+    }
+  }
+}

@@ -1,0 +1,46 @@
+name: PostLayout
+label: Post
+layout: PostLayout
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - PageLayout
+fields:
+  - type: date
+    name: date
+    label: Date
+    required: true
+  - name: category
+    type: reference
+    label: Category
+    default: content/data/category/misc.json
+    models:
+      - Category
+  - name: author
+    type: reference
+    label: Author
+    models:
+      - Person
+  - type: string
+    name: excerpt
+    label: Excerpt
+    default: Nunc rutrum felis dui, ut consequat sapien scelerisque vel. Integer condimentum dignissim justo vel faucibus.
+  - name: featuredImage
+    type: model
+    label: Featured image
+    models:
+      - ImageBlock
+    default:
+      type: ImageBlock
+      media:
+        type: Media
+        src: 'https://www.datocms-assets.com/64528/1646636342-icon.png'
+        alt: 'Watheia'
+        width: 512
+        height: 512
+  - name: bottomSections
+    type: list
+    label: Sections
+    items:
+      type: model
+      groups:
+        - sectionComponent

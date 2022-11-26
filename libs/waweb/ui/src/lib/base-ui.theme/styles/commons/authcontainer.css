@@ -1,0 +1,23 @@
+.authcontainer a {
+  color: #0596a6 !important;
+}
+
+.authcontainer button[type='submit'] {
+  background: #0596a6 !important;
+}
+
+.authcontainer input:focus {
+  border-color: #0596a6 !important;
+}
+
+.authcontainer .sbui-typography-text,
+.sbui-auth-label,
+.sbui-typography-text-secondary,
+.sbui-checkbox__label-container__label__span {
+  color: var(--accents-1, #fafafa);
+}
+
+.authcontainer .sbui-typography-text-danger {
+  top: 3px !important;
+  position: absolute !important;
+}

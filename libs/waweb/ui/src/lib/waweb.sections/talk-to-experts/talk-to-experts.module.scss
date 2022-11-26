@@ -1,0 +1,27 @@
+@import '../../base-ui.layout/breakpoints/_breakpoints.scss';
+
+.talkToExperts {
+  display: flex;
+  flex-direction: column;
+
+  > :first-child {
+    margin-bottom: 50px;
+  }
+
+  > :nth-child(2) {
+    margin: 0 auto;
+  }
+
+  button {
+    width: 180px;
+  }
+
+  @media (min-width: $br-l) {
+    flex-direction: row;
+
+    > :first-child {
+      width: 61%;
+      margin-bottom: unset;
+    }
+  }
+}

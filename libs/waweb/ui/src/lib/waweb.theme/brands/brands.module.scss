@@ -1,0 +1,12 @@
+/**
+ * css variables definition, for brand colors.
+ * @example
+ * <div className={brands}>{children}</div>
+ */
+
+.brands {
+  --wa-github-bg: #2b2b2b;
+  --wa-brand-text: #ffffff;
+  --wa-slack-bg: #4a154b;
+  --wa-twitter-bg: #1da1f2;
+}

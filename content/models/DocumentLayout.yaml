@@ -1,0 +1,12 @@
+name: DocumentLayout
+label: Post
+layout: DocumentLayout
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - PageLayout
+fields:
+  - name: author
+    type: reference
+    label: Author
+    models:
+      - Person

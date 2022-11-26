@@ -1,0 +1,48 @@
+type: object
+name: TextBlock
+label: Text block
+labelField: title
+extends:
+  - BlockElement
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: title
+    type: string
+    label: Title
+    default: The block title
+  - name: content
+    type: markdown
+    label: Text
+    default: |-
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam. Eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Sed ut perspiciatis undeomnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam. Eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  - name: styles
+    type: style
+    styles:
+      self:
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+      title:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      content:
+        textAlign: ['left', 'center', 'right']
+    default:
+      self:
+        width: wide
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-4', 'pb-4', 'pl-2', 'pr-2']
+      title:
+        textAlign: left
+      content:
+        textAlign: left

@@ -1,0 +1,47 @@
+type: object
+name: ImageBlock
+label: Image
+labelField: caption
+fieldGroups:
+  - name: settings
+    label: Settings
+fields:
+  - name: media
+    type: model
+    label: Media configuration
+    models: [Media]
+  - name: caption
+    type: string
+    label: Caption
+    description: The caption of the image
+    default: Caption of the image
+  - name: layout
+    type: enum
+    group: settings
+    label: Image layout
+    description: Select how the image behaves responsively
+    options:
+      - intrinsic
+      - fixed
+      - responsive
+      - fill
+      - raw
+  - name: objectFit
+    type: enum
+    group: settings
+    label: Object fit
+    description: Select an area fit behavior (layout="fill")
+    options:
+      - fill
+      - contain
+      - cover
+      - none
+      - scale-down
+  - name: styles
+    type: style
+    styles:
+      self:
+        opacity: '*'
+    default:
+      self:
+        opacity: 100

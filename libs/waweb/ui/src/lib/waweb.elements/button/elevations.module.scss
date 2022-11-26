@@ -1,0 +1,28 @@
+// elevations only
+
+.low {
+  box-shadow: var(--wa-shadow-hover-low, initial);
+
+  &:active:not(:disabled) {
+    box-shadow: var(--wa-shadow-resting, initial);
+    transform: translateY(2px);
+  }
+}
+
+.medium {
+  box-shadow: var(--wa-shadow-hover-medium, initial);
+
+  &:active:not(:disabled) {
+    box-shadow: var(--wa-shadow-resting, initial);
+    transform: translateY(2px);
+  }
+}
+
+.high {
+  box-shadow: var(--wa-shadow-hover-high, initial);
+
+  &:active:not(:disabled) {
+    box-shadow: var(--wa-shadow-resting, initial);
+    transform: translateY(11px);
+  }
+}

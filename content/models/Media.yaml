@@ -1,0 +1,29 @@
+type: object
+name: Media
+label: Asset
+labelField: alt
+readOnly: true
+fields:
+  - name: alt
+    type: string
+    label: Alt text
+    description: The alt text of the image
+    default: altText of the image
+  - name: src
+    type: string
+    label: Image URL
+    description: Image source
+    default: https://www.datocms-assets.com/64528/1646636342-icon.png
+    required: true
+  - name: width
+    type: number
+    label: Image width
+    description: The original width in pixels prior to any transformations
+    required: true
+    default: 512
+  - name: height
+    type: number
+    label: Image height
+    description: The original height in pixels prior to any transformations
+    required: true
+    default: 512

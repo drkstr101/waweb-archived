@@ -1,0 +1,38 @@
+type: object
+name: BlockElement
+label: BlockElement
+groups:
+  - blockComponent
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: elementId
+    type: string
+    group: settings
+    label: Element ID
+    description: The unique ID for an HTML element, must not contain whitespace
+    default: ''
+  - name: styles
+    type: style
+    group: styles
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+    default:
+      self:
+        height: auto
+        width: narrow
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-4', 'pb-4', 'pl-2', 'pr-2']
+        justifyContent: center
+      title:
+        textAlign: left
+      subtitle:
+        textAlign: left

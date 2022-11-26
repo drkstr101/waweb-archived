@@ -1,0 +1,31 @@
+name: Person
+label: Person
+labelField: firstName
+fields:
+  - type: string
+    name: firstName
+    label: First name
+    default: Name
+    required: true
+  - type: string
+    name: lastName
+    label: Last name
+    default: Surname
+  - type: string
+    name: role
+    label: Role
+    default: Role
+  - type: markdown
+    name: bio
+    label: Bio
+    default: With over 10 years in both public and private sectors, Johnna has experience in management consultation, team building, professional development, strategic implementation, and company collaboration.
+  - name: avatar
+    type: model
+    label: Image
+    models: [Media]
+    default:
+      type: Media
+      src: 'https://www.datocms-assets.com/64528/1646636342-icon.png'
+      alt: 'Watheia'
+      width: 512
+      height: 512

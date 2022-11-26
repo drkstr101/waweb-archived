@@ -1,0 +1,27 @@
+type: object
+name: FeaturedPostsSection
+label: Featured posts
+labelField: title
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - PostFeedSection
+groups:
+  - sectionComponent
+fields:
+  - name: title
+    type: string
+    default: Featured
+  - name: subtitle
+    type: string
+    default: Featured blog posts section example
+  - name: posts
+    type: list
+    label: Posts
+    items:
+      type: reference
+      models:
+        - PostLayout
+    default:
+      - content/pages/blog/post-three.md
+      - content/pages/blog/post-two.md
+      - content/pages/blog/post-one.md

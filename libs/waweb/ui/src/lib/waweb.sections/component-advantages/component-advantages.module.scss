@@ -1,0 +1,8 @@
+@import '../../base-ui.layout/breakpoints/breakpoints';
+
+.text {
+  @media screen and (min-width: $br-l) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

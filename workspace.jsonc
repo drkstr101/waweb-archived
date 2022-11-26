@@ -1,0 +1,177 @@
+/**
+ * this is the main configuration file of your bit workspace.
+ * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
+ **/ {
+  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  /**
+   * main configuration of the Bit workspace.
+   **/
+  "teambit.workspace/workspace": {
+    /**
+     * the name of the component workspace. used for development purposes.
+     **/
+    "name": "Watheia Labs",
+    /**
+     * set the icon to be shown on the Bit server.
+     **/
+    "icon": "https://watheia.com/images/icon.png",
+    /**
+     * default directory to place a component during `bit import` and `bit create`.
+     * the following placeholders are available:
+     * name - component name includes namespace, e.g. 'ui/button'.
+     * scopeId - full scope-id includes the owner, e.g. 'teambit.compilation'.
+     * scope - scope name only, e.g. 'compilation'.
+     * owner - owner name in bit.dev, e.g. 'teambit'.
+     **/
+    "defaultDirectory": "scopes/{scope}/{name}/src",
+    /**
+     * default scope for all components in workspace.
+     **/
+    "defaultScope": "watheia.waweb"
+  },
+  /**
+   * main configuration for component dependency resolution.
+   **/
+  "teambit.dependencies/dependency-resolver": {
+    /**
+     * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
+     */
+    "packageManager": "teambit.dependencies/yarn",
+    "policy": {
+      "dependencies": {},
+      "peerDependencies": {
+        "@adobe/react-spectrum": "^3.16.5",
+        "@reach/skip-nav": "^0.17.0",
+        "@supabase/supabase-js": "^1.35.1",
+        "core-js": "^3.22.2",
+        "gray-matter": "^4.0.3",
+        "markdown-to-jsx": "^7.1.7",
+        "next": "^12.1.5",
+        "nprogress": "^0.2.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "regenerator-runtime": "^0.13.9",
+        "remark": "^14.0.2",
+        "remark-html": "^15.0.1",
+        "tslib": "^2.4.0",
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/forms": "^0.5.0",
+        "@tailwindcss/typography": "^0.5.2",
+        "@testing-library/react": "13.1.1",
+        "@testing-library/react-hooks": "8.0.0",
+        "@types/chai": "^4.3.1",
+        "@types/jest": "^27.4.1",
+        "@types/node": "^16.11.27",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "daisyui": "^2.14.1",
+        "postcss": "^8.4.12",
+        "postcss-custom-properties": "^12.1.7",
+        "postcss-dir-pseudo-class": "^6.0.4",
+        "postcss-flexbugs-fixes": "^5.0.2",
+        "postcss-focus-ring": "^1.0.0",
+        "postcss-functions": "^4.0.2",
+        "postcss-hover-media-feature": "^1.0.2",
+        "postcss-import": "^14.1.0",
+        "postcss-inherit": "^4.1.0",
+        "postcss-loader": "^6.2.1",
+        "postcss-logical": "^5.0.4",
+        "postcss-modules": "^4.3.1",
+        "postcss-nested": "^5.0.6",
+        "postcss-preset-env": "^7.4.3",
+        "postcss-svg": "^3.0.0",
+        "react-test-renderer": "^18.0.0",
+        "sourcebit": "^0.11.1",
+        "sourcebit-source-filesystem": "^0.2.0",
+        "sourcebit-target-next": "^0.8.1",
+        "tailwindcss": "^3.0.24"
+      }
+    }
+  },
+  /**
+   * Add an aditional bundler for pure html
+   */
+  "teambit.compilation/bundler": {
+    "dedicatedEnvDevServers": ["teambit.html/html"]
+  },
+  /**
+   * workspace variants allow to set different subsets of configuration for components in your
+   * workspace. this is extremely useful for upgrading, aligning and building components with a new
+   * set of dependencies. a rule can be a directory or a component-id/namespace, in which case,
+   * wrap the rule with curly brackets (e.g. `"{ui/*}": {}`)
+   * see https://harmony-docs.bit.dev/aspects/variants for more info.
+   **/
+  "teambit.workspace/variants": {
+    "*": {
+      "teambit.pkg/pkg": {
+        "packageManagerPublishArgs": [
+          // "--access public"
+        ],
+        "packageJson": {
+          "name": "@watheia/{scope}.{name}",
+          "private": false,
+          "author": {
+            "name": "Aaron R Miller",
+            "email": "amiller@watheia.org"
+          },
+          "repository": {
+            "url": "https://github.com/drkstr101/watheia",
+            "directory": "scopes/{scope}/{name}"
+          },
+          "homepage": "https://github.com/watheia/components",
+          "keywords": ["micro", "microcomponent", "microfrontend", "bit", "harmony"]
+        },
+        "license": "MIT"
+      }
+    },
+    "scopes/base-ui": {
+      "defaultScope": "watheia.base-ui"
+    },
+    "scopes/envs": {
+      "defaultScope": "watheia.envs"
+    },
+    "scopes/demo": {
+      "defaultScope": "watheia.demo"
+    },
+    "scopes/spectrum": {
+      "defaultScope": "watheia.spectrum"
+    },
+    "scopes/tools": {
+      "defaultScope": "watheia.tools"
+    },
+    /**
+     * configures all components with the appropritate build environment
+     *
+     */
+    "{ui/**}": {
+      "teambit.react/react": {}
+    },
+    /**
+     * configures components with namespaces 'entities', 'modules' and 'functions' to use the
+     * default NodeJS dev environment.
+     */
+    // "{elements/**}, {ui/**}, {text/*}": {
+    //   "waweb.envs/wa-react": {},
+    //   "teambit.react/react": "-"
+    // },
+    /**
+     * configures components with namespace 'content' to use the MDX dev environment.
+     */
+    // "{content/**}": {
+    //   "teambit.mdx/mdx": {}
+    // },
+    /**
+     * configures components with namespaces 'envs' and 'aspects' to use the default Aspect development environment.
+     */
+    // "{wa-react}": {
+    //   "teambit.harmony/aspect": {}
+    // },
+    "spectrum/design/typography": {
+      // e.g. apply the env to all components under the some/path directory
+      "teambit.html/html": {}
+    }
+    // "spectrum/theme": {
+    //   "teambit.react/react": {}
+    // }
+  }
+}

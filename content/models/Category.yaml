@@ -1,0 +1,16 @@
+name: Category
+label: Category
+labelField: name
+fields:
+  - type: string
+    name: name
+    label: Category name
+    required: true
+  - name: slug
+    type: string
+    label: Slug
+    required: true
+  - name: description
+    type: markdown
+    label: Description
+    default: With over 10 years in both public and private sectors, Johnna has experience in management consultation...

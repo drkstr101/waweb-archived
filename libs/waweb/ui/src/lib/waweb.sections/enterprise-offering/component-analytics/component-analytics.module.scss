@@ -1,0 +1,51 @@
+@import '../../../base-ui.layout/breakpoints/_breakpoints.scss';
+
+.scrollPreventer {
+  overflow: hidden;
+  // "what could possibly go wrong?", he said,
+  // knowing at least 3 points of failure
+}
+
+.customGrid {
+  grid-template: auto auto / 100%;
+
+  @media screen and (min-width: $br-sm) {
+    grid-template: 740px / 460px 1fr;
+  }
+}
+
+.imgContainer {
+  position: relative;
+  height: 100%;
+
+  img {
+    width: 100%;
+
+    @media screen and (min-width: $br-sm) {
+      position: absolute;
+      width: 740px;
+      max-width: unset;
+      top: 0;
+    }
+  }
+}
+
+.list {
+  list-style-type: none;
+  margin-bottom: 40px;
+
+  > li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 11px;
+    line-height: 23px;
+
+    // icon
+    > span {
+      font-size: 22px;
+      line-height: 1;
+      margin-right: 0.38em;
+      line-height: inherit;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// font sizes only!
+
+.xxs {
+  font-size: var(--wa-p-xxs, 12px);
+}
+
+.xs {
+  font-size: var(--wa-p-xs, 14px);
+}
+
+.sm {
+  font-size: var(--wa-p-sm, 15px);
+}
+
+.md {
+  font-size: var(--wa-p-md, 16px);
+}
+
+.lg {
+  font-size: var(--wa-p-lg, 18px);
+}
+
+.xl {
+  font-size: var(--wa-p-xl, 20px);
+}
+
+.xxl {
+  font-size: var(--wa-p-xxl, 24px);
+}

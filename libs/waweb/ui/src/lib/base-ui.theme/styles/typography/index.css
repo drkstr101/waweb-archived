@@ -1,0 +1,182 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import '~@compendium/theme.styles.commons';
+@import 'font.css';
+
+/*@mixin typography .Body1 {}
+@mixin typography .Body2 {}
+@mixin typography .Body3 {}
+@mixin typography .Body4 {}
+@mixin typography .Body5 {}
+@mixin typography .Heading1 {}
+@mixin typography .Heading2 {}
+@mixin typography .Heading3 {}
+@mixin typography .Heading4 {}
+@mixin typography .Heading5 {}
+@mixin typography .Heading6 {}
+@mixin typography .Subheading {}
+@mixin typography .Detail {}
+@mixin typography .Heading1--quiet, heading-quiet-1 {}
+@mixin typography .Heading2--quiet, heading-quiet-2 {}
+@mixin typography .Heading1--strong, heading-strong-1 {}
+@mixin typography .Heading2--strong, heading-strong-2 {}
+@mixin typography .Heading1--display, display-1 {}
+@mixin typography .Heading2--display, display-2 {}
+@mixin typography .Heading1--display.Heading1--strong, display-strong-1 {}
+@mixin typography .Heading2--display.Heading2--strong, display-strong-2 {}
+@mixin typography .Heading1--display.Heading1--quiet, display-quiet-1 {}
+@mixin typography .Heading2--display.Heading2--quiet, display-quiet-2 {}
+
+.Typography {
+  @mixin typographyMargins .Body1 {}
+  @mixin typographyMargins .Body2 {}
+  @mixin typographyMargins .Body3 {}
+  @mixin typographyMargins .Body4 {}
+  @mixin typographyMargins .Body5 {}
+  @mixin typographyMargins .Heading1 {}
+  @mixin typographyMargins .Heading2 {}
+  @mixin typographyMargins .Heading3 {}
+  @mixin typographyMargins .Heading4 {}
+  @mixin typographyMargins .Heading5 {}
+  @mixin typographyMargins .Heading6 {}
+  @mixin typographyMargins .Subheading {}
+  @mixin typographyMargins .Detail {}
+  @mixin typographyMargins .Heading1--quiet, heading-quiet-1 {}
+  @mixin typographyMargins .Heading2--quiet, heading-quiet-2 {}
+  @mixin typographyMargins .Heading1--strong, heading-strong-1 {}
+  @mixin typographyMargins .Heading2--strong, heading-strong-2 {}
+  @mixin typographyMargins .Heading1--display, display-1 {}
+  @mixin typographyMargins .Heading2--display, display-2 {}
+  @mixin typographyMargins .Heading1--display.Heading1--strong, display-strong-1 {}
+  @mixin typographyMargins .Heading2--display.Heading2--strong, display-strong-2 {}
+  @mixin typographyMargins .Heading1--display.Heading1--quiet, display-quiet-1 {}
+  @mixin typographyMargins .Heading2--display.Heading2--quiet, display-quiet-2 {}
+}
+
+.Article {
+  font-family: var(--body-article-1-text-font-family);
+  @mixin typography .Body1, body-article-1 {}
+  @mixin typography .Body2, body-article-2 {}
+  @mixin typography .Body3, body-article-3 {}
+  @mixin typography .Body4, body-article-4 {}
+  @mixin typography .Body5, body-article-5 {}
+  @mixin typography .Heading1, heading-article-1 {}
+  @mixin typography .Heading2, heading-article-2 {}
+  @mixin typography .Heading3, heading-article-3 {}
+  @mixin typography .Heading4, heading-article-4 {}
+  @mixin typography .Heading5, heading-article-5 {}
+  @mixin typography .Heading6, heading-article-6 {}
+  @mixin typography .Subheading, subheading-article {}
+  @mixin typography .Detail, detail-article {}
+  @mixin typography .Heading1--quiet, heading-quiet-article-1 {}
+  @mixin typography .Heading2--quiet, heading-quiet-article-2 {}
+  @mixin typography .Heading1--display, display-article-1 {}
+  @mixin typography .Heading2--display, display-article-2 {}
+  @mixin typography .Heading1--display.Heading1--quiet, display-quiet-article-1 {}
+  @mixin typography .Heading2--display.Heading2--quiet, display-quiet-article-2 {}
+}
+.molecular {
+  &:lang(ja),
+  &:lang(ko),
+  &:lang(zh) {
+    @mixin typography .Body1, body-han-1 {}
+    @mixin typography .Body2, body-han-2 {}
+    @mixin typography .Body3, body-han-3 {}
+    @mixin typography .Body4, body-han-4 {}
+    @mixin typography .Body5, body-han-5 {}
+    @mixin typography .Heading1, heading-han-1 {}
+    @mixin typography .Heading2, heading-han-2 {}
+    @mixin typography .Heading3, heading-han-3 {}
+    @mixin typography .Heading4, heading-han-4 {}
+    @mixin typography .Heading5, heading-han-5 {}
+    @mixin typography .Heading6, heading-han-6 {}
+    @mixin typography .Subheading, subheading-han {}
+    @mixin typography .Detail, detail-han {}
+    @mixin typography .Heading1--quiet, heading-quiet-han-1 {}
+    @mixin typography .Heading2--quiet, heading-quiet-han-2 {}
+    @mixin typography .Heading1--strong, heading-strong-han-1 {}
+    @mixin typography .Heading2--strong, heading-strong-han-2 {}
+    @mixin typography .Heading1--display, display-han-1 {}
+    @mixin typography .Heading2--display, display-han-2 {}
+    @mixin typography .Heading1--display.Heading1--strong, display-strong-han-1 {}
+    @mixin typography .Heading2--display.Heading2--strong, display-strong-han-2 {}
+    @mixin typography .Heading1--display.Heading1--quiet, display-quiet-han-1 {}
+    @mixin typography .Heading2--display.Heading2--quiet, display-quiet-han-2 {}
+  }
+}
+@mixin typography .Code1, body-code-1, true {
+  font-family: var(--body-code-1-text-font-family);
+}
+@mixin typography .Code2, body-code-2, true {
+  font-family: var(--body-code-2-text-font-family);
+}
+@mixin typography .Code3, body-code-3, true {
+  font-family: var(--body-code-3-text-font-family);
+}
+@mixin typography .Code4, body-code-4, true {
+  font-family: var(--body-code-4-text-font-family);
+}
+@mixin typography .Code5, body-code-5, true {
+  font-family: var(--body-code-5-text-font-family);
+}*/
+
+/*
+  The &.molecular makes it so users can do <div class="spectrum -large"> and still get the right font sizes
+  Without this, they would have to do <div class="-large"><div class="spectrum">, which makes no sense
+*/
+&.molecular,
+&.Body,
+.molecular,
+.Body {
+  font-size: var(--body-4-text-size);
+  font-weight: var(--body-4-text-font-weight);
+  line-height: var(--body-4-text-line-height);
+  font-style: var(--body-4-text-font-style);
+}
+
+.Body--italic {
+  font-style: var(--body-4-emphasis-text-font-style);
+}
+
+/*
+.Body--large {
+  @extend .Body2;
+}
+
+.Body--small {
+  @extend .Body5;
+}
+
+.Body--secondary {
+  @extend .Body4;
+}
+
+.Heading--display {
+  @extend .Heading2--display.Heading2--quiet;
+}
+
+.Heading--pageTitle {
+  @extend .Heading2--quiet;
+}
+
+.Heading--subtitle1 {
+  @extend .Heading4;
+}
+
+.Heading--subtitle2 {
+  @extend .Heading6;
+}
+
+.Heading--subtitle3 {
+  @extend .Subheading;
+}*/

@@ -1,0 +1,108 @@
+type: object
+name: ContactSection
+label: Contact
+labelField: title
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - Section
+groups:
+  - sectionComponent
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: backgroundSize
+    type: enum
+    group: styles
+    label: Background size
+    options:
+      - label: Full
+        value: full
+      - label: Inset
+        value: inset
+    default: full
+  - name: title
+    type: string
+    label: Title
+  - name: content
+    type: markdown
+    label: Text
+    default: |
+      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
+      Aenean vel aliquet elit, at blandit ipsum.
+  - name: form
+    type: model
+    label: Form
+    models:
+      - FormBlock
+    default:
+      type: FormBlock
+      elementId: contact-form
+      action: /api/post
+      destination: ''
+      fields:
+        - type: TextFormControl
+          name: name
+          label: Name
+          placeholder: Your name
+          isRequired: true
+          width: 1/2
+        - type: EmailFormControl
+          name: email
+          label: Email
+          placeholder: Your email
+          isRequired: true
+          width: 1/2
+        - type: TextFormControl
+          name: home-address
+          label: Home address
+          placeholder: Your home address
+          isRequired: true
+          width: full
+        - type: CheckboxFormControl
+          name: updates
+          label: Sign me up to receive updates
+          width: full
+      submitLabel: Send Message
+  - name: media
+    type: model
+    label: Media
+    models:
+      - ImageBlock
+      - VideoBlock
+    default:
+      type: ImageBlock
+      url: https://assets.stackbit.com/components/images/default/contact.png
+      altText: Contact form image
+  - name: styles
+    type: style
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+        alignItems: ['flex-start', 'flex-end', 'center']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+        flexDirection: ['row', 'row-reverse', 'col', 'col-reverse']
+      title:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      content:
+        textAlign: ['left', 'center', 'right']
+    default:
+      self:
+        height: auto
+        width: wide
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-12', 'pb-12', 'pl-4', 'pr-4']
+        alignItems: center
+        justifyContent: center
+        flexDirection: row
+      title:
+        textAlign: left
+      content:
+        textAlign: left

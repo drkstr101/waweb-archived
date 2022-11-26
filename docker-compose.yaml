@@ -1,0 +1,68 @@
+# to run define K3S_TOKEN, K3S_VERSION is optional, eg:
+#   K3S_TOKEN=${RANDOM}${RANDOM}${RANDOM} docker-compose up
+
+version: '3.7'
+services:
+  gitlab-runner:
+    image: 'gitlab/gitlab-runner:alpine'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config/gitlab-runner:/etc/gitlab-runner
+    restart: unless-stopped
+
+  # dev.local:
+  #   image: 'registry:2'
+  #   ports:
+  #     - 5000:5000
+
+  # k3s-server:
+  #   image: 'rancher/k3s'
+  #   command: server
+  #   tmpfs:
+  #     - /run
+  #     - /var/run
+  #   ulimits:
+  #     nproc: 65535
+  #     nofile:
+  #       soft: 65535
+  #       hard: 65535
+  #   privileged: true
+  #   restart: always
+  #   environment:
+  #     - K3S_TOKEN=${K3S_TOKEN:?err}
+  #     - K3S_KUBECONFIG_OUTPUT=/output/kubeconfig.yaml
+  #     - K3S_KUBECONFIG_MODE=666
+  #   volumes:
+  #     - k3s-server:/var/lib/rancher/k3s
+  #     # This is just so that we get the kubeconfig file out
+  #     - .:/output
+  #     - ./registries.yaml:/etc/rancher/k3s/registries.yaml
+  #     - ./config/k3s:/var/lib/rancher/k3s/server/manifests
+  #   ports:
+  #     - 6443:6443 # Kubernetes API Server
+  #     - 80:80 # Ingress controller port 80
+  #     - 443:443 # Ingress controller port 443
+  #     - 8080:8080
+  #     - 8000:8000
+  #     - 8443:8443
+
+  # k3s-agent:
+  #   image: 'rancher/k3s'
+  #   tmpfs:
+  #     - /run
+  #     - /var/run
+  #   ulimits:
+  #     nproc: 65535
+  #     nofile:
+  #       soft: 65535
+  #       hard: 65535
+  #   privileged: true
+  #   restart: always
+  #   environment:
+  #     - K3S_URL=https://k3s-server:6443
+  #     - K3S_TOKEN=${K3S_TOKEN:?err}
+  #   volumes:
+  #     - ./registries.yaml:/etc/rancher/k3s/registries.yaml
+# volumes:
+#   k3s-server: {}
+#   gitlab: {}

@@ -1,0 +1,29 @@
+type: data
+name: Config
+label: Site configuration
+singleInstance: true
+readOnly: true
+fieldGroups:
+  - name: seo
+    label: SEO
+fields:
+  - name: brandName
+    type: string
+    label: Brand Name
+    required: true
+  - name: repo
+    type: string
+    label: Repo
+    required: true
+  - name: header
+    type: model
+    label: Header configuration
+    models: [Header]
+  - name: footer
+    type: model
+    label: Footer configuration
+    models: [Footer]
+  - name: seo
+    type: model
+    label: Default seo
+    models: [Seo]

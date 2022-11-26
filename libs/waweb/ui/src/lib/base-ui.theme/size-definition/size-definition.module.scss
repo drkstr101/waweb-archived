@@ -1,0 +1,42 @@
+/**
+ * Css-variables definitions for font sizes.
+ * For headers:
+ * -   `--wa-h-xxs: 18px`
+ * -   `--wa-h-xs: 26px`
+ * -   `--wa-h-sm: 36px`
+ * -   `--wa-h-md: 40px`
+ * -   `--wa-h-lg: 50px`
+ * -   `--wa-h-xl: 60px`
+ * -   `--wa-h-xxl: 80px`
+
+ * For paragraphs:
+ * -   `--wa-p-xxs: 12px`
+ * -   `--wa-p-xs: 14px`
+ * -   `--wa-p-sm: 15px`
+ * -   `--wa-p-md: 16px`
+ * -   `--wa-p-lg: 18px`
+ * -   `--wa-p-xl: 20px`
+ * -   `--wa-p-xxl: 24px`
+ *
+ * To use, add classes `heading` and `text` to your root component.
+ */
+
+.headingFontSize {
+  --wa-h-xxs: 18px;
+  --wa-h-xs: 26px;
+  --wa-h-sm: 36px;
+  --wa-h-md: 40px;
+  --wa-h-lg: 50px;
+  --wa-h-xl: 60px;
+  --wa-h-xxl: 80px;
+}
+
+.textFontSize {
+  --wa-p-xxs: 12px;
+  --wa-p-xs: 14px;
+  --wa-p-sm: 15px;
+  --wa-p-md: 16px;
+  --wa-p-lg: 18px;
+  --wa-p-xl: 20px;
+  --wa-p-xxl: 24px;
+}

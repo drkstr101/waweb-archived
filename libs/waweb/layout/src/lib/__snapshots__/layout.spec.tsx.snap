@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`waweb.layout should render successfully 1`] = `
+<div>
+  <svg
+    class="svg"
+    fill="#151513"
+    height="64"
+    viewBox="0 0 250 250"
+    width="64"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <a
+      href="https://github.com/drkstr101/watheia"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="View Source"
+    >
+      <path
+        d="M0 0l115 115h15l12 27 108 108V0z"
+        fill="#fff"
+      />
+      <path
+        class="arm"
+        d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16"
+      />
+      <path
+        d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z"
+      />
+    </a>
+  </svg>
+  <div
+    class="layout"
+  >
+    <header
+      class="header"
+    >
+      <div
+        class="headerLogos"
+      >
+        <div
+          class="mobile-nav-btn"
+        >
+          <button
+            aria-label="Navigator"
+            class="spectrum-ActionButton_e2d99e"
+            style="cursor: pointer;"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="spectrum-Icon_368b34 spectrum-Icon--sizeS_368b34 spectrum-Icon_e2d99e"
+              focusable="false"
+              role="img"
+              viewBox="0 0 36 36"
+            >
+              <rect
+                height="4"
+                rx="1"
+                ry="1"
+                width="28"
+                x="4"
+                y="16"
+              />
+              <rect
+                height="4"
+                rx="1"
+                ry="1"
+                width="28"
+                x="4"
+                y="6"
+              />
+              <rect
+                height="4"
+                rx="1"
+                ry="1"
+                width="28"
+                x="4"
+                y="26"
+              />
+            </svg>
+          </button>
+        </div>
+        <a
+          class="logo"
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27640%27%20height=%27220%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F64528%2F1646636345-logo.png&w=1920&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F64528%2F1646636345-logo.png&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F64528%2F1646636345-logo.png&w=1920&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+      </div>
+      <div
+        class="tabs"
+      >
+        <a
+          class="tab"
+          href="/blog"
+        >
+          Blog
+        </a>
+        <a
+          class="tab"
+          href="/expo"
+        >
+          Expo
+        </a>
+        <a
+          class="tab"
+          href="/contact"
+        >
+          Contact
+        </a>
+      </div>
+    </header>
+    <div
+      class="page"
+    >
+      <div
+        class="app-messages absolute top-6 z-10 flex w-screen flex-col place-items-center justify-center"
+      />
+      <div
+        class="main"
+      >
+        <div
+          class="full"
+        >
+          <div
+            data-reach-skip-nav-content=""
+            id="reach-skip-nav"
+          />
+          <div>
+            Hello, World!
+          </div>
+        </div>
+      </div>
+      <footer
+        class="footer border-t border-dotted border-secondary bg-base-700"
+        data-testid="waweb.layout/footer"
+      >
+        <div
+          class="footer-legal"
+        >
+          <div
+            class="footer-copyright"
+            data-testid="waweb.layout/footer:copyright"
+          >
+            © 2022 Watheia Labs, LLC.
+          </div>
+          <div
+            class="footer-center-group"
+          >
+            <p
+              class="footer-paragraph"
+            >
+              <a
+                class="footer-link"
+                data-testid="waweb.layout/footer:view-source"
+                href="https://gitlab.com/watheia/waweb"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Source
+              </a>
+            </p>
+            <div
+              class="footer-separator"
+            />
+            <p
+              class="footer-paragraph"
+            >
+              <a
+                class="footer-link"
+                href="/terms-and-conditions"
+              >
+                Terms
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;

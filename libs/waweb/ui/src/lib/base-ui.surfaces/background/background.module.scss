@@ -1,0 +1,26 @@
+.bedrock {
+  background: var(--wa-bg-bedrock, hsl(var(--b1)));
+}
+
+.base {
+  background: var(--wa-bg-color, hsl(var(--b1)));
+}
+
+.layer {
+  background: var(--wa-bg-color, hsl(var(--b1)));
+}
+
+.crust {
+  background: var(--wa-bg-tooltip, hsl(var(--b1)));
+}
+
+.topping {
+  background: var(--wa-bg-color, hsl(var(--b1)));
+  &:hover {
+    background: var(--wa-bg-heavy, hsl(var(--b2)));
+  }
+}
+
+.dent {
+  background: var(--wa-bg-dent, hsl(var(--b2)));
+}

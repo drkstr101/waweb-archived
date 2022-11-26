@@ -1,0 +1,57 @@
+@import '../../../base-ui.constants/storage/_storage.module.scss';
+@import '../../../base-ui.layout/breakpoints/_breakpoints.scss';
+
+.content {
+  @media screen and (min-width: $br-l) {
+    margin-left: 50%;
+  }
+}
+
+.corpoBg {
+  @media screen and (min-width: $br-l) {
+    background: url($staticStorageUrl + '/enterprise-offering-v1/4-secured-section/sphere-enterprise.png')
+      no-repeat;
+    background-position: calc(50% - 340px) 0px;
+    background-size: 565px 690px;
+    padding-bottom: 30px;
+  }
+
+  // @specificity-war - 2 level selector to fight bit.dev :(
+  .corposphere {
+    max-width: 565px;
+  }
+}
+
+.corposphere {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $br-l) {
+    display: none;
+  }
+}
+
+.bulletList {
+  > li {
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $br-md) {
+      margin-bottom: 64px;
+      display: flex;
+    }
+  }
+}
+
+h2.title {
+  margin-bottom: 46px;
+}
+
+.bullet {
+  flex: none;
+  width: 43px;
+  height: 43px;
+  margin: 0 24px 16px;
+}

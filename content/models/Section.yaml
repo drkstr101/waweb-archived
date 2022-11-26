@@ -1,0 +1,58 @@
+type: object
+name: Section
+label: Section
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: title
+    type: string
+    label: Title
+    default: The section title
+  - name: subtitle
+    type: string
+    label: Subtitle
+    default: The section subtitle
+  - name: slot
+    type: string
+    group: settings
+    label: Layout slot
+    description: Where to place the element in the layout
+    default: null
+  - name: elementId
+    type: string
+    group: settings
+    label: Element ID
+    description: The unique ID for an HTML element, must not contain whitespace
+    default: ''
+  - name: styles
+    type: style
+    group: styles
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+      title:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      subtitle:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+    default:
+      self:
+        height: auto
+        width: wide
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-12', 'pb-12', 'pl-4', 'pr-4']
+        justifyContent: center
+      title:
+        textAlign: left
+      subtitle:
+        textAlign: left

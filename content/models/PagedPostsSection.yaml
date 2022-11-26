@@ -1,0 +1,26 @@
+type: object
+name: PagedPostsSection
+label: Post feed
+labelField: title
+extends:
+  - PostFeedSection
+fields:
+  - name: title
+    type: string
+    hidden: true
+    default: null
+  - name: subtitle
+    type: string
+    hidden: true
+    default: null
+  - name: showDate
+    type: boolean
+    default: true
+  - name: showAuthor
+    type: boolean
+    default: true
+  - name: variant
+    default: variant-a
+  - name: actions
+    hidden: true
+    default: []

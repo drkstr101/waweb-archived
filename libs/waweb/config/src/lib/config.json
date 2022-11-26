@@ -1,0 +1,67 @@
+{
+  "type": "Config",
+  "brandName": "Watheia",
+  "repo": "https://github.com/drkstr101/watheia",
+  "header": {
+    "primaryLinks": [
+      {
+        "type": "Link",
+        "label": "Blog",
+        "url": "/blog",
+        "altText": ""
+      },
+      {
+        "type": "Link",
+        "label": "Expo",
+        "url": "/expo",
+        "altText": ""
+      },
+      {
+        "type": "Link",
+        "label": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "logo": {
+      "type": "Media",
+      "alt": "Watheia Labs",
+      "src": "https://www.datocms-assets.com/64528/1646636345-logo.png",
+      "width": 640,
+      "height": "220"
+    }
+  },
+  "footer": {
+    "copyrightText": "© 2022 Watheia Labs, LLC.",
+    "legalLinks": [
+      {
+        "type": "Link",
+        "label": "Source Code",
+        "url": "https://github.com/drkstr101/waweb"
+      },
+      {
+        "type": "Link",
+        "label": "Terms & Conditions",
+        "url": "/terms-and-conditions"
+      }
+    ]
+  },
+  "seo": {
+    "type": "Seo",
+    "titleSuffix": "Watheia Labs",
+    "socialImage": "https://www.datocms-assets.com/64528/1646691502-wa-card-4x.png",
+    "metaTags": [
+      {
+        "property": "og:title",
+        "content": ""
+      },
+      {
+        "property": "og:description",
+        "content": "A capabilities test for the modern web"
+      },
+      {
+        "property": "og:url",
+        "content": "https://watheia.com/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+.label {
+  display: inline-block;
+  color: var(--wa-accent-heavy);
+  background: var(--wa-accent-bg);
+
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--wa-p-xxs, 12px);
+}

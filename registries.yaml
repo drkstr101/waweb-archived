@@ -1,0 +1,4 @@
+mirrors:
+  'dev.local:5000':
+    endpoint:
+      - http://dev.local:5000

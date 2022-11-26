@@ -1,0 +1,14 @@
+.iconLine {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	min-height: 32px; //preserve height while loading images
+	max-width: 323px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.icon {
+	width: 30px;
+}

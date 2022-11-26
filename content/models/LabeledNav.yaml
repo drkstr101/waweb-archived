@@ -1,0 +1,42 @@
+type: object
+name: LabeledNav
+label: LabeledNav
+labelField: text
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: label
+    type: string
+    label: Label
+    required: false
+  - name: text
+    type: string
+    label: Link text
+    default: 'Learn more'
+    description: The alternative text for screen readers
+    required: true
+  - name: to
+    type: string
+    label: Jump to section
+    default: '/#intro'
+    required: true
+  - name: style
+    type: enum
+    group: styles
+    controlType: button-group
+    label: Style
+    options:
+      - label: Primary
+        value: primary
+      - label: Secondary
+        value: secondary
+    default: primary
+  - name: elementId
+    type: string
+    group: settings
+    label: Element ID
+    description: The unique ID for an HTML element, must not contain whitespace
+    default: ''

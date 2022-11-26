@@ -1,0 +1,92 @@
+@import '../colors/colors.module.scss';
+
+// brand colors
+.primary {
+  --wa-accent-color: hsl(var(--a));
+  --wa-accent-heavy: #025151;
+  --wa-accent-light: #42fbfb;
+  --wa-accent-text: hsl(var(--a));
+  --wa-accent-text-heavy: #025151;
+  --wa-text-on-accent: hsl(var(--ac));
+  --wa-accent-bg: #{$p20};
+  --wa-accent-bg-heavy: #{$p30};
+}
+
+.complementary {
+  --wa-accent-color: #{$pink50};
+  --wa-accent-heavy: #{$pink60};
+  --wa-accent-light: #{$pink40};
+  --wa-accent-text: #{$pink50};
+  --wa-accent-text-heavy: #{$pink60};
+  --wa-text-on-accent: #{$w10};
+  --wa-accent-bg: #{$pink20};
+  --wa-accent-bg-heavy: #{$pink30};
+}
+
+// intents
+.impulsive {
+  --wa-accent-color: #{$r50};
+  --wa-accent-heavy: #{$r60};
+  --wa-accent-light: #{$r40};
+  --wa-accent-text: #{$r50};
+  --wa-accent-text-heavy: #{$r60};
+  --wa-text-on-accent: #{$w10};
+  --wa-accent-bg: #{$r20};
+  --wa-accent-bg-heavy: #{$r30};
+}
+
+.hungry {
+  --wa-accent-color: #{$y50};
+  --wa-accent-heavy: #{$y60};
+  --wa-accent-light: #{$y40};
+  --wa-accent-text: #{$y50};
+  --wa-accent-text-heavy: #{$y60};
+  --wa-text-on-accent: #{$d70};
+  --wa-accent-bg: #{$y20};
+  --wa-accent-bg-heavy: #{$y30};
+}
+
+.success {
+  --wa-accent-color: #{$g50};
+  --wa-accent-heavy: #{$g60};
+  --wa-accent-light: #{$g40};
+  --wa-accent-text: #{$g50};
+  --wa-accent-text-heavy: #{$g60};
+  --wa-text-on-accent: #{$w10};
+  --wa-accent-bg: #{$g20};
+  --wa-accent-bg-heavy: #{$g30};
+}
+
+.process {
+  --wa-accent-color: #{$b50};
+  --wa-accent-heavy: #{$b60};
+  --wa-accent-light: #{$b40};
+  --wa-accent-text: #{$b50};
+  --wa-accent-text-heavy: #{$b60};
+  --wa-text-on-accent: #{$w10};
+  --wa-accent-bg: #{$b20};
+  --wa-accent-bg-heavy: #{$b30};
+}
+
+// weight
+.emphasized {
+  --wa-accent-color: #{$d60};
+  --wa-accent-heavy: #{$d70};
+  --wa-accent-light: #{$d50};
+  --wa-accent-text: #{$d60};
+  --wa-accent-text-heavy: #{$d70};
+  --wa-text-on-accent: #{$w10};
+  --wa-accent-bg: #{$d10};
+  --wa-accent-bg-heavy: #{$d15};
+}
+
+.neutral {
+  --wa-accent-color: #{$d50};
+  --wa-accent-heavy: #{$d60};
+  --wa-accent-light: #{$d40};
+  --wa-accent-text: #{$d50};
+  --wa-accent-text-heavy: #{$d60};
+  --wa-text-on-accent: #{$w10};
+  --wa-accent-bg: #{$w20};
+  --wa-accent-bg-heavy: #{$d10};
+}

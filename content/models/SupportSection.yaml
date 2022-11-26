@@ -1,0 +1,115 @@
+type: object
+name: SupportSection
+label: Support
+labelField: title
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - Section
+groups:
+  - sectionComponent
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - type: string
+    name: title
+    label: Title
+    default: Get Support
+  - type: string
+    name: subtitle
+    label: Subtitle
+    default: The section subtitle
+  - type: markdown
+    name: content
+    label: Content
+    default: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu eros pulvinar lorem blandit mattis.
+      Fusce placerat, nisl sit amet fringilla tincidunt, nibh risus pellentesque dui, ac vulputate quam felis
+      lobortis dolor. Duis accumsan arcu nec elit tincidunt, convallis efficitur felis rhoncus. Nulla gravida
+      libero lacinia nulla mattis condimentum. In hac habitasse platea dictumst. Duis cursus scelerisque orci,
+      vitae congue justo cursus sed. Praesent elementum urna vel est sollicitudin congue. Aenean non convallis
+      tortor. Sed
+  - type: list
+    name: actions
+    label: Actions
+    items:
+      type: model
+      models:
+        - Action
+        - Link
+    default:
+      - type: Link
+        label: Get Support
+        url: '/'
+        showIcon: true
+        icon: arrowRight
+  - type: list
+    name: items
+    label: Items
+    items:
+      type: model
+      models:
+        - SupportItem
+    default:
+      - question: How is this different from what we have today?
+        answer: At the office, working together is often a distruction, on remote, it could be motivation. At the office, working together is often a distruction, on remote, it could be motivation. At the office, working together is often a distruction, on remote, it could be motivation.
+      - question: How is this different from what we have today?
+        answer: At the office, working together is often a distruction, on remote, it could be motivation. At the office, working together is often a distruction, on remote, it could be motivation. At the office, working together is often a distruction, on remote, it could be motivation.
+      - question: How is this different from what we have today?
+        answer: At the office, working together is often a distruction, on remote, it could be motivation. At the office, working together is often a distruction, on remote, it could be motivation. At the office, working together is often a distruction, on remote, it could be motivation.
+  - type: style
+    name: styles
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+        borderRadius: '*'
+        borderWidth: ['0:8']
+        borderStyle: '*'
+        borderColor:
+          - value: 'border-primary'
+            label: 'Primary color'
+            color: '$primary'
+          - value: 'border-secondary'
+            label: 'Secondary color'
+            color: '$secondary'
+          - value: 'border-dark'
+            label: 'Dark color'
+            color: '$dark'
+          - value: 'border-complementary'
+            label: 'Complementary color'
+            color: '$complementary'
+      title:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      subtitle:
+        fontWeight: ['400', '700']
+        fontStyle: ['normal', 'italic']
+        textAlign: ['left', 'center', 'right']
+      actions:
+        justifyContent: ['flex-start', 'flex-end', 'center']
+    default:
+      self:
+        height: auto
+        width: wide
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-12', 'pb-12', 'pl-4', 'pr-4']
+        justifyContent: center
+        borderRadius: none
+        borderWidth: 0
+        borderStyle: none
+        borderColor: border-dark
+      title:
+        textAlign: center
+      subtitle:
+        fontWeight: 400
+        fontStyle: normal
+        textAlign: center
+      actions:
+        justifyContent: center

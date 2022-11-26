@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expo should render successfully 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h1>
+      Welcome to Expo!
+    </h1>
+  </div>
+</div>
+`;

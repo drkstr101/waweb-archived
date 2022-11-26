@@ -1,0 +1,36 @@
+type: object
+name: Header
+label: Header
+readOnly: true
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: logo
+    type: model
+    label: Logo
+    models: [Media]
+    default:
+      type: Media
+      src: 'https://www.datocms-assets.com/64528/1646636345-logo.png'
+      alt: 'Watheia'
+      width: 660
+      height: 220
+  - name: primaryLinks
+    type: list
+    label: Primary navigation links
+    items:
+      type: model
+      models: [Link]
+    default:
+      - type: Link
+        label: Blog
+        url: /blog
+      - type: Link
+        label: Expo
+        url: /expo
+      - type: Link
+        label: Contact
+        url: /contact

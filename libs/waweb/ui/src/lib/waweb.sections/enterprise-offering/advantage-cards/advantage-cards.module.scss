@@ -1,0 +1,69 @@
+@import '../../../base-ui.theme/colors/colors.module.scss';
+@import '../../../base-ui.layout/breakpoints/_breakpoints.scss';
+@import '../../../base-ui.constants/storage/_storage.module.scss';
+
+.paragraph {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $br-sm) {
+    margin-bottom: 80px;
+  }
+}
+
+.particlesBg {
+  @media screen and (min-width: $br-l) {
+    background-image: url($staticStorageUrl + '/enterprise-offering-v1/3-bit-enterprise/particles.svg?v=2');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 40px 80px 80px 80px;
+  }
+}
+
+.grid {
+  gap: 20px;
+
+  @media screen and (min-width: $br-l) {
+    gap: 40px;
+  }
+}
+
+.card {
+  min-height: 500px;
+  padding: 35px 29px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 26px 72px 0 rgba(0, 0, 0, 0.1);
+
+  button {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $br-l) {
+    padding: 46px 42px;
+  }
+}
+
+.subtitle {
+  height: 100px;
+}
+
+.bullets {
+  flex-grow: 1;
+  margin-bottom: 40px;
+  font-size: 15px;
+
+  padding-left: 8px;
+
+  li {
+    display: flex;
+    margin-bottom: 7px;
+
+    // icon
+    > span {
+      line-height: inherit;
+      margin-right: 8px;
+    }
+  }
+}

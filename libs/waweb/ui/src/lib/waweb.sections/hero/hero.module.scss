@@ -1,0 +1,47 @@
+@import '../../base-ui.layout/breakpoints/_breakpoints.scss';
+
+.mainGrid {
+  gap: 76px;
+
+  @media screen and (min-width: $br-lg) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.spacer {
+  width: 20px;
+  height: 20px;
+}
+
+.headline {
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  margin-bottom: 46px;
+}
+
+.buttons {
+  margin: 0 auto 46px;
+
+  @media screen and (min-width: $br-sm) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $br-l) {
+    justify-content: left;
+  }
+
+  button {
+    width: 199px;
+  }
+}
+
+.icons {
+  margin: 0 auto;
+
+  @media screen and (min-width: $br-l) {
+    margin: 0 0 auto 0;
+  }
+}

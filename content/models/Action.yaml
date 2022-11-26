@@ -1,0 +1,105 @@
+type: object
+name: Action
+label: Action
+labelField: label
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: label
+    type: string
+    label: Label
+    default: Learn more
+  - name: altText
+    type: string
+    label: Alt text
+    default: ''
+    description: The alternative text for screen readers
+  - name: url
+    type: string
+    label: URL
+    default: '/'
+    required: true
+  - name: showIcon
+    type: boolean
+    group: styles
+    label: Show icon
+    default: false
+  - name: icon
+    type: enum
+    group: styles
+    label: Icon
+    options:
+      - label: Apple
+        value: apple
+      - label: Arrow left
+        value: arrowLeft
+      - label: Arrow left circle
+        value: arrowLeftCircle
+      - label: Arrow right
+        value: arrowRight
+      - label: Arrow right
+        value: arrowRightCircle
+      - label: Cart
+        value: cart
+      - label: Chevron left
+        value: chevronLeft
+      - label: Chevron right
+        value: chevronRight
+      - label: Facebook
+        value: facebook
+      - label: GitHub
+        value: github
+      - label: Google Play
+        value: googlePlay
+      - label: Instagram
+        value: instagram
+      - label: LinkedIn
+        value: linkedin
+      - label: Mail
+        value: mail
+      - label: Play
+        value: play
+      - label: Play circle
+        value: playCircle
+      - label: Reddit
+        value: reddit
+      - label: Send
+        value: send
+      - label: Twitter
+        value: twitter
+      - label: Vimeo
+        value: vimeo
+      - label: YouTube
+        value: youtube
+    default: arrowRight
+  - name: iconPosition
+    type: enum
+    group: styles
+    controlType: button-group
+    label: Icon position
+    options:
+      - label: Left
+        value: left
+      - label: Right
+        value: right
+    default: right
+  - name: style
+    type: enum
+    group: styles
+    controlType: button-group
+    label: Style
+    options:
+      - label: Primary
+        value: primary
+      - label: Secondary
+        value: secondary
+    default: secondary
+  - name: elementId
+    type: string
+    group: settings
+    label: Element ID
+    description: The unique ID for an HTML element, must not contain whitespace
+    default: ''

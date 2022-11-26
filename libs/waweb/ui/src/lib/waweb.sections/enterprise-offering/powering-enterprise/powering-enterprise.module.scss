@@ -1,0 +1,38 @@
+@import '../../../base-ui.layout/breakpoints/_breakpoints.scss';
+
+.poweringEnterprise {
+  display: grid;
+  grid-template: auto 2px auto / 1fr;
+  align-items: center;
+  gap: 40px;
+
+  @media screen and (min-width: $br-md) {
+    grid-template: 1fr / 1fr 2px 1fr;
+  }
+}
+
+.crunchTheNumbers {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  align-items: center;
+
+  height: 280px;
+}
+
+.separator {
+  height: 100%;
+  width: 100%;
+  background: hsl(var(--a));
+  border-radius: 2px;
+}
+
+.emphasized,
+.xtraEmpthasized {
+  font-size: 60px;
+  line-height: 76px;
+  font-weight: 800;
+}
+
+.xtraEmpthasized {
+  font-size: 80px;
+}

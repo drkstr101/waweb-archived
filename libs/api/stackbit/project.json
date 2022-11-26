@@ -1,0 +1,32 @@
+{
+  "root": "libs/api/stackbit",
+  "sourceRoot": "libs/api/stackbit/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api/stackbit",
+        "main": "libs/api/stackbit/src/index.ts",
+        "tsConfig": "libs/api/stackbit/tsconfig.lib.json",
+        "assets": ["libs/api/stackbit/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/stackbit/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/stackbit"],
+      "options": {
+        "jestConfig": "libs/api/stackbit/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
