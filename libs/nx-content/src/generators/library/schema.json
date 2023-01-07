@@ -7,7 +7,7 @@
   "type": "object",
   "examples": [
     {
-      "command": "nx g nx-content content --directory=myapp",
+      "command": "nx g @watheia/waweb.nx-content:library content --directory=myapp",
       "description": "Generate `libs/myapp/content`"
     }
   ],

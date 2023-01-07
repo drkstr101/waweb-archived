@@ -50,16 +50,16 @@ function addProject(tree: Tree, options: NormalizedSchema) {
   if (options.buildable) {
     addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion });
     projectConfiguration.targets.build = {
-      executor: '@nrwl/js:tsc',
-      outputs: ['{options.outputPath}'],
+      executor: '@watheia/waweb.nx-content:build',
+      outputs: ['{projectRoot}/.contentlayer'],
       options: {
-        outputPath:
-          options.libsDir != '.'
-            ? `dist/${options.libsDir}/${options.projectDirectory}`
-            : `dist/${options.projectDirectory}`,
-        main: `${options.projectRoot}/src/index` + (options.js ? '.js' : '.ts'),
-        tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
-        assets: [`${options.projectRoot}/*.md`],
+        // outputPath:
+        //   options.libsDir != '.'
+        //     ? `dist/${options.libsDir}/${options.projectDirectory}`
+        //     : `dist/${options.projectDirectory}`,
+        // main: `${options.projectRoot}/src/index` + (options.js ? '.js' : '.ts'),
+        // tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
+        // assets: [`${options.projectRoot}/*.md`],
       },
     };
   }

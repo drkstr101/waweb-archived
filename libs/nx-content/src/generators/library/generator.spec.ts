@@ -12,7 +12,7 @@ import {
 import { Linter } from '@nrwl/linter';
 
 import { libraryGenerator } from './generator';
-import { NxContentGeneratorSchema } from './schema.d';
+import { NxContentGeneratorSchema } from './schema';
 
 describe('lib', () => {
   let tree: Tree;
@@ -808,7 +808,7 @@ describe('lib', () => {
       expect(workspaceJson.projects['my-lib'].root).toEqual('libs/my-lib');
       expect(workspaceJson.projects['my-lib'].architect.build).toBeTruthy();
       expect(workspaceJson.projects['my-lib'].architect.build.builder).toBe(
-        '@nrwl/js:tsc'
+        '@watheia/waweb.nx-content:build'
       );
     });
 
