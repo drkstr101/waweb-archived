@@ -4,7 +4,7 @@ import {
   StdioNull,
   StdioPipe,
 } from 'node:child_process';
-import { join } from 'path';
+import { resolve } from 'path';
 import { BuildExecutorSchema } from '../schema';
 
 interface NormalizedSchema {
@@ -28,10 +28,10 @@ export default function normalizeOptions(
   context: ExecutorContext
 ): NormalizedSchema {
   const projectRoot = context.projectGraph.nodes[context.projectName].data.root;
-  const configFile = join(projectRoot, options.contentlayerConfig);
+  const configFile = resolve(projectRoot, options.contentlayerConfig);
   const proc = {
-    command: 'pwd',
-    args: [],
+    command: process.platform === 'win32' ? 'contentlayer.cmd' : 'contentlayer',
+    args: ['build', `--config=${configFile}`],
     options: {
       cwd: projectRoot,
       shell: true,

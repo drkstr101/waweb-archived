@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@watheia/waweb.content": ["libs/content/src/index.ts"],
+      "@watheia/waweb.content": ["libs/content/.contentlayer/generated"],
       "@watheia/waweb.nx-content": ["libs/nx-content/src/index.ts"]
     }
   },
