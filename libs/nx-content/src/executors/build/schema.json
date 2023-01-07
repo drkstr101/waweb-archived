@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "cli": "nx",
+  "title": "Contentlayer executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "contentlayerConfig": {
+      "type": "string",
+      "description": "A path to the contentlayer config file relative to project root",
+      "default": "contentlayer.config.ts"
+    }
+  },
+  "required": []
+}
