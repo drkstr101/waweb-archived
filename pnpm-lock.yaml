@@ -46,6 +46,7 @@ specifiers:
   eslint-plugin-jsx-a11y: 6.6.1
   eslint-plugin-react: 7.31.11
   eslint-plugin-react-hooks: 4.6.0
+  fs-extra: ^11.1.0
   husky: ^8.0.0
   jest: 28.1.1
   jest-environment-jsdom: 28.1.1
@@ -70,6 +71,7 @@ dependencies:
   contentlayer: 0.2.9_esbuild@0.15.18
   core-js: 3.27.0
   date-fns: 2.29.3
+  fs-extra: 11.1.0
   next: 13.1.1_7xlrwlvvs7cv2obrs6a5y6oxxq
   next-contentlayer: 0.2.9_bnftj5wo6hnhtktgdcunezwwem
   react: 18.2.0
@@ -7685,6 +7687,15 @@ packages:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0
       universalify: 2.0.0
+
+  /fs-extra/11.1.0:
+    resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
+    engines: {node: '>=14.14'}
+    dependencies:
+      graceful-fs: 4.2.10
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: false
 
   /fs-extra/8.1.0:
     resolution: {integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==}
