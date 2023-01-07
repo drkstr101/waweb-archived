@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@watheia/waweb.nx-content": ["libs/nx-content/src/index.ts"],
-      "contentlayer/generated": ["apps/home/.contentlayer/generated"]
+      "@watheia/waweb.content": ["libs/content/src/index.ts"],
+      "@watheia/waweb.nx-content": ["libs/nx-content/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
