@@ -1,1 +1,1 @@
-export * from './lib/content';
+export default {};

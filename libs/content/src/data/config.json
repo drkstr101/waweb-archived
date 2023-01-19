@@ -1,0 +1,132 @@
+{
+  "type": "Config",
+  "favicon": "/images/icon.png",
+  "defaultMetaTags": [],
+  "header": {
+    "headerVariant": "variant-b",
+    "isSticky": true,
+    "title": "Watheia Labs",
+    "isTitleVisible": false,
+    "logo": {
+      "src": "/images/logo-alt.png",
+      "alt": "Watheia Labs"
+    },
+    "primaryLinks": [
+      {
+        "label": "Home",
+        "url": "/",
+        "altText": "Navigate to home"
+      },
+      {
+        "label": "Blog",
+        "url": "/blog",
+        "altText": "Navigate to blog root"
+      },
+      {
+        "label": "Contact",
+        "url": "/contact",
+        "altText": "Navigate to contact form"
+      }
+    ],
+    "secondaryLinks": [
+      {
+        "type": "Action",
+        "label": "Login",
+        "url": "/login",
+        "altText": "User login",
+        "variant": "clear"
+      }
+    ],
+    "styles": {
+      "self": {
+        "width": "narrow"
+      }
+    }
+  },
+  "footer": {
+    "variant": "variant-b",
+    "colors": "colors-d",
+    "title": "Say hello",
+    "copyrightText": "© 2022 [Watheia Labs, LLC.](https://www.watheia.com/). All rights reserved.\n",
+    "socialLinks": [
+      {
+        "type": "Social",
+        "altText": "Twitter",
+        "label": "Twitter",
+        "url": "/",
+        "icon": "twitter"
+      },
+      {
+        "type": "Social",
+        "altText": "Instagram",
+        "label": "Instagram",
+        "url": "/",
+        "icon": "instagram"
+      },
+      {
+        "type": "Social",
+        "altText": "Facebook",
+        "label": "Facebook",
+        "url": "/",
+        "icon": "facebook"
+      }
+    ],
+    "solutionLinks": [
+      {
+        "label": "Home",
+        "url": "/",
+        "altText": ""
+      },
+      {
+        "label": "About",
+        "url": "/about",
+        "altText": ""
+      },
+      {
+        "label": "Blog",
+        "url": "/blog",
+        "altText": ""
+      },
+      {
+        "label": "Contact us",
+        "url": "mailto:info@lorem.mail",
+        "altText": ""
+      }
+    ],
+    "supportLinks": [
+      {
+        "label": "Documentation",
+        "url": "/docs"
+      },
+      {
+        "label": "Contact us",
+        "url": "/contact"
+      }
+    ],
+    "companyLinks": [
+      {
+        "label": "About Us",
+        "url": "#about"
+      },
+      {
+        "label": "Our Team",
+        "url": "#team"
+      },
+      {
+        "label": "FAQ",
+        "url": "#faq"
+      }
+    ],
+    "legalLinks": [
+      {
+        "label": "Terms & Conditions",
+        "url": "/"
+      }
+    ],
+    "styles": {
+      "self": {
+        "width": "narrow"
+      }
+    }
+  }
+}

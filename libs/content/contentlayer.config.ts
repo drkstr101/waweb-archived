@@ -1,30 +1,9 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-
-const Page = defineDocumentType(() => ({
-  name: 'Page',
-  filePathPattern: `**/*.md`,
-  fields: {
-    title: {
-      type: 'string',
-      description: 'The title of the post',
-      required: true,
-    },
-    date: {
-      type: 'date',
-      description: 'The date of the post',
-      required: true,
-    },
-  },
-  computedFields: {
-    url: {
-      type: 'string',
-      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
-    },
-  },
-}));
+import { makeSource } from 'contentlayer/source-files';
+import Config from './src/lib/config';
+import Page from './src/lib/page';
 
 export default makeSource({
-  contentDirPath: 'src/pages',
-  documentTypes: [Page],
+  contentDirPath: 'src',
+  documentTypes: [Config, Page],
   disableImportAliasWarning: true,
 });
