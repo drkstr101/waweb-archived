@@ -29,8 +29,10 @@ export default function normalizeOptions(
 ): NormalizedSchema {
   const projectRoot = context.projectGraph.nodes[context.projectName].data.root;
   const configFile = resolve(projectRoot, options.contentlayerConfig);
+  const command =
+    process.platform === 'win32' ? 'contentlayer.cmd' : 'contentlayer';
   const proc = {
-    command: process.platform === 'win32' ? 'contentlayer.cmd' : 'contentlayer',
+    command: resolve('node_modules', '.bin', command),
     args: ['build', `--config=${configFile}`],
     options: {
       cwd: projectRoot,

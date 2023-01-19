@@ -28,8 +28,10 @@ export default async function runExecutor(
       opts.proc.options
     );
     if (context.isVerbose) {
-      console.log(await readableToString(childProcess.stdout));
+      console.log(`=========== building content ===========`);
+      console.log(opts);
     }
+    console.info(await readableToString(childProcess.stdout));
   } catch (error) {
     console.error(error);
     success = false;
