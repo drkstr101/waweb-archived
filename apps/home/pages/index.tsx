@@ -783,8 +783,9 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 border-t border-gray-200 py-8">
-              <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2022 Watheia Labs, LLC. All rights reserved.
+              <p className="wa-copyright text-base text-gray-400 xl:text-center">
+                &copy; {new Date().getFullYear()} Watheia Labs, LLC. All rights
+                reserved.
               </p>
             </div>
           </div>
