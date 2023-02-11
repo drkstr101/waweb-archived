@@ -2,3 +2,8 @@
 
 /dist
 /coverage
+/tmp
+/pnpm-lock.yaml
+
+.next
+.contentlayer

@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@watheia/waweb.content": ["libs/content/.contentlayer/generated"],
+      "@watheia/waweb.nx-content": ["libs/nx-content/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
